@@ -25,7 +25,7 @@ SECRET_KEY = 'z*#a!alpp!s^6(y9t9u^+m1&aw1h#qg&ae3ub9!e)zz6wpk2x3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://juliusweb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
