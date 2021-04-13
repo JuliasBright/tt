@@ -1,144 +1,533 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <head>
-        <!-- Meta Robort -->
-        <meta name=”robots” content="index, follow">
-   
-        <!-- Meta View -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <head>
+    <!-- Meta Robort -->
+    <meta name=”robots” content="index, follow">
+
+    <!-- Meta View -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     
-       <!-- Favicons --> 
-  <meta name="msapplication-TileColor" content="#FFF" />
-  <meta name="theme-color" content="#FFF" />
-  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicons/apple-icon-57x57.png' %}" />
-  <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicons/apple-icon-60x60.png' %}" />
-  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicons/apple-icon-72x72.png' %}" />
-  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicons/apple-icon-114x114.png' %}" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicons/apple-icon-76x76.png' %}" />
-  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicons/apple-icon-120x120.png' %}" />
-  <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicons/apple-icon-152x152.png' %}" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-icon-180x180.png' %}" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-32x32.png' %}" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-36x36.png' %}" sizes="36x36" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-48x48.png' %}" sizes="48x48" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-72x72.png' %}" sizes="72x72" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-96x96.png' %}" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-144x144.png' %}" sizes="144x144" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-192x192.png' %}" sizes="192x192" />
-        <link rel='mask-icon' href="{% static 'img/favicons/apple-icon-57x57.png' %}" color='#fff'/>
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-96x96.png' %}" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-16x16.png' %}" sizes="16x16" />
-  <meta name="msapplication-TileImage" content="{% static 'img/favicons/ms-icon-144x144.png' %}" />
-  <meta name="msapplication-square70x70logo" content="{% static 'img/favicons/ms-icon-70x70.png' %}" />
-  <meta name="msapplication-square150x150logo" content="{% static 'img/favicons/ms-icon-150x150.png' %}" />
-  <meta name="msapplication-wide310x150logo" content="{% static 'img/favicons/ms-icon-310x150.png' %}" />
-  <meta name="msapplication-square310x310logo" content="{% static 'img/favicons/ms-icon-310x310.png' %}" />
-  <link href="{% static 'img/favicons/apple-startup-320x460.png' %}" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-640x920.png' %}" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-640x1096.png' %}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-748x1024.png' %}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-750x1024.png' %}" media="" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-750x1294.png' %}" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-768x1004.png' %}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-1182x2208.png' %}" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-1242x2148.png' %}" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-1496x2048.png' %}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" rel="apple-touch-startup-image" />
-  <link href="{% static 'img/favicons/apple-startup-1536x2008.png' %}" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" rel="apple-touch-startup-image" />
-  <link rel="manifest" href="{% static 'img/favicons/manifest.json' %}" />
-       
-        <!-- Primary Meta Tags -->
-        <title>Julius Bright</title>
-        <meta name="title" content="Julius Bright">
-        <meta name="revisit-after" content="3 days">
-        <meta name="description" content="Full-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
+    <meta name="msapplication-TileColor" content="#FFF" />
+    <meta name="theme-color" content="#FFF" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicons/apple-icon-57x57.png' %}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicons/apple-icon-60x60.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicons/apple-icon-72x72.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicons/apple-icon-114x114.png' %}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicons/apple-icon-76x76.png' %}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicons/apple-icon-120x120.png' %}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicons/apple-icon-152x152.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-icon-180x180.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-32x32.png' %}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-36x36.png' %}" sizes="36x36" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-48x48.png' %}" sizes="48x48" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-72x72.png' %}" sizes="72x72" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-96x96.png' %}" sizes="96x96" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-144x144.png' %}" sizes="144x144" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/android-icon-192x192.png' %}" sizes="192x192" />
+    <link rel='mask-icon' href="{% static 'img/favicons/apple-icon-57x57.png' %}" color='#fff' />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-96x96.png' %}" sizes="96x96" />
+    <link rel="icon" type="image/png" href="{% static 'img/favicons/favicon-16x16.png' %}" sizes="16x16" />
+    <meta name="msapplication-TileImage" content="{% static 'img/favicons/ms-icon-144x144.png' %}" />
+    <meta name="msapplication-square70x70logo" content="{% static 'img/favicons/ms-icon-70x70.png' %}" />
+    <meta name="msapplication-square150x150logo" content="{% static 'img/favicons/ms-icon-150x150.png' %}" />
+    <meta name="msapplication-wide310x150logo" content="{% static 'img/favicons/ms-icon-310x150.png' %}" />
+    <meta name="msapplication-square310x310logo" content="{% static 'img/favicons/ms-icon-310x310.png' %}" />
+    <link href="{% static 'img/favicons/apple-startup-320x460.png' %}"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-640x920.png' %}"
+      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-640x1096.png' %}"
+      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-748x1024.png' %}"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: landscape)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-750x1024.png' %}" media="" rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-750x1294.png' %}"
+      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-768x1004.png' %}"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1) and (orientation: portrait)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-1182x2208.png' %}"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-1242x2148.png' %}"
+      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-1496x2048.png' %}"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+      rel="apple-touch-startup-image" />
+    <link href="{% static 'img/favicons/apple-startup-1536x2008.png' %}"
+      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      rel="apple-touch-startup-image" />
+    <link rel="manifest" href="{% static 'img/favicons/manifest.json' %}" /> 
+
+    <!-- Primary Meta Tags -->
+    <title>B & G</title>
+    <meta name="title" content="Julius Bright">
+    <meta name="revisit-after" content="3 days">
+    <meta name="description" content="Full-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
     Looking for Developer?. Get Impressed.!!">
-    
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://juliusbright.com/">
-        <meta property="og:title" content="Julius Bright">
-        <meta property="og:description" content="Full-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://juliusbright.com/">
+    <meta property="og:title" content="Julius Bright">
+    <meta property="og:description" content="Full-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
         Looking for Developer?. Get Impressed.!!">
-        <meta property="og:image" content="">
-    
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://juliusbright.com/">
-        <meta property="twitter:title" content="JuliusFull-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://juliusbright.com/">
+    <meta property="twitter:title" content="JuliusFull-stack Developer, Software Engineer, Award-Nominated(2020) and Founder of Bright-Group.
         Looking for Developer?. Get Impressed.!!!">
-        <meta property="twitter:image" content="">
-        <meta name="Author" content="Julius Bright">
-        <!-- I LEFT THIS FOR DEVELOPERS
+    <meta property="twitter:image" content="">
+    <meta name="Author" content="Julius Bright">
+    <!-- I LEFT THIS FOR DEVELOPERS
                   VISIT HERE:#################
                   FOR COLLAB,EDUCATION & OLD TIME COMPETITION.
                   @crack the code to get our attetion.
         -->
-        <link rel='stylesheet preload ' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
-        <link rel="stylesheet preload" href="{% static 'css/main.css'%}">
-        <link rel="stylesheet preload" href="{% static 'js/main.js'%}">      
-   </head>
-   <!-- onmousedown = 'return false' -->
-   <body  onselectstart = 'return false' >
-       <section class="header">
-        <div class="box1">
-            <div class="AC_tx">
-                <h1><img class="AC_tx" src="{% static 'img/Logo.GIF' %}"></h1>
+    <link rel='stylesheet preload ' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="stylesheet" href="{% static 'css/all.css'%}">
+    <link rel="stylesheet preload" href="{% static 'js/main.js'%}">
+    <style>
+      /* i have bug in my background */
+      body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("{% static 'img/cool-background.svg' %}");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+    </style>
+  </head>
+  <!-- onmousedown = 'return false' -->
+
+
+  <body onselectstart='return false'>
+    <section>
+      <div class="summerdream">
+  
+        <div class="ship">
+          <div class="rotate">
+            <div class="move">
+              <div class="body">
+                <div class="waves">
+                  <div class="bodywaves">
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                  </div>
+                  <div class="oarwaves -left">
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                  </div>
+                  <div class="oarwaves -right">
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                    <div class="wave">
+                      <div class="graphic"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="base"></div>
+                <div class="board -front"></div>
+                <div class="board -back"></div>
+              </div>
+              <div class="oars">
+                <div class="oar -left">
+                  <div class="row -left">
+                    <div class="depth -left">
+                      <div class="graphic -left"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="oar -right">
+                  <div class="row -right">
+                    <div class="depth -right">
+                      <div class="graphic -right"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="human">
+                <div class="legs">
+                  <div class="leg -left"></div>
+                  <div class="leg -right"></div>
+                </div>
+                <div class="hat"></div>
+              </div>
             </div>
-        </div>
-        <div class="nav-but-wrap ">
-          <div class="m_button">
-            <span class="menu-icon__line menu-icon__line-left "></span>
-            <span class="menu-icon__line  "></span>
-            <span class="menu-icon__line menu-icon__line-right "></span>
           </div>
-          
-          <!-- <div class="menu-icon hover-target ">
-              <span class="menu-icon__line menu-icon__line-left "></span>
-              <span class="menu-icon__line "></span>
-              <span class="menu-icon__line menu-icon__line-right "></span>
-          </div> -->
+        </div>
       </div>
-  </div>
-
-      </section>
-
-    
-      <!-- <div data-poster-url="https://assets.website-files.com/5f69b9b3fd92fb30908b5c93/5f75e11437019e5e50170a41_video_2-poster-00001.jpg" data-video-urls="https://assets.website-files.com/5f69b9b3fd92fb30908b5c93/5f75e11437019e5e50170a41_video_2-transcode.mp4,https://assets.website-files.com/5f69b9b3fd92fb30908b5c93/5f75e11437019e5e50170a41_video_2-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom"><video autoplay="" loop="" style="background-image:url(5f75e11437019e5e50170a41_video_2-poster-00001.html)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets.website-files.com/5f69b9b3fd92fb30908b5c93/5f75e11437019e5e50170a41_video_2-transcode.mp4" data-wf-ignore="true"><source src="https://assets.website-files.com/5f69b9b3fd92fb30908b5c93/5f75e11437019e5e50170a41_video_2-transcode.webm" data-wf-ignore="true"></video></div>
-      <<section > 
-        <div class="searchbx">
-          <div class="field">
-            <span class="fas fa-search" aria-hidden="true"></span>
-            <input type="search" placeholder="search">
-          </div>
+    </section>
+  
+    <section class="header">
+      <div class="box1">
+        <span class="loading  ">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        Bright Group
+      </div>
+      </div>
+  
+      <div class="nav-but-wrap ">
+        <div class="m_button">
+          <span class="menu-icon__line menu-icon__line-left "></span>
+          <span class="menu-icon__line  "></span>
+          <span class="menu-icon__line menu-icon__line-right "></span>
+  
         </div>
-  </div> 
-  </section> -->
-  <section class="searchbx">
-    <div class="box1">
-      <div class="AC_tx">
-          <h1>Site under construction </h1>
-
-      <div class="NextpsBt">
-        
-        <button class="NPB">View old site <a href=""><i class="fas fa-angle-right"></i></a> </button>
-    </div>
-  </div>
-  </div>
-  </section>
- 
-
-     <footer class="footer">
+      </div>
+      </div>
+      <!-- Here i cant make this slide from side of html help me Thanks -->
+      <!-- <nav>
+        <ul >
+          <li class="is-active"><span>Home</span></li>
+          <li><span>About</span></li>
+          <li><span>Contact</span></li>
+          <li><span>Hire us</span></li>
+        </ul>
+      </nav> -->
+    </section>
+  
+    <section>
+      <div class="wrap">
+        <div class="textx"></div>
+        <div class="search">
+          <input type="text" class="searchTerm" placeholder="Search For Your Desired Website Today!!">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  
+  
+  
+    <section>
+  
+      <div class="tabs">
+  
+        <input type="radio" id="tab1" name="tab-control" checked>
+        <input type="radio" id="tab2" name="tab-control">
+        <input type="radio" id="tab3" name="tab-control">
+        <input type="radio" id="tab4" name="tab-control">
+        <ul>
+          <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24">
+                <path
+                  d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z" />
+              </svg><br><span>Products </span></label></li>
+          <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24">
+                <path
+                  d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+              </svg><br><span>Application </span></label></li>
+          <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+                <path
+                  d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+              </svg><br><span>Offers </span></label></li>
+          <li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+                <path
+                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+              </svg><br><span>Reviews</span></label></li>
+        </ul>
+  
+        <div class="slider">
+          <div class="indicator"></div>
+        </div>
+        <div class="content">
+          <section>
+            <h2>Products</h2>
+            To display some html
+  
+        </div>
+    </section>
+  
+  
+  
+    <footer class="footer">
       <div class="wrapper">
         <div class="icon facebook">
           <div class="tooltip">Facebook</div>
           <span><i class="fab fa-facebook"></i></span>
         </div>
-        <div class="icon twitter">
-          <div class="tooltip">Twitter</div>
-          <span><i class="fab fa-twitter"></i></span>
-        </div>
+  
         <div class="icon instagram">
           <div class="tooltip">Instagram</div>
           <span><i class="fab fa-instagram"></i></span>
@@ -148,177 +537,47 @@
           <span><i class="fab fa-github"></i></span>
         </div>
         <div class="icon youtube">
-          <div class="tooltip">Youtube</div>
-          <span><i class="fab fa-youtube"></i></span>
+          <div class="tooltip">Pinterest</div>
+          <span><i class="fab fa-pinterest"></i></span>
         </div>
       </div>
-     </footer>
-<!--     
-           
-        
-    
-      
-    
-    
-    
-    
-        <div class="box1">
-            <div class="NextpsBt">
-                <button class="NPB"><i class="fas fa-angle-left"></i></button>
-                <button class="NPB"><i class="fas fa-angle-right"></i></button>
-            </div>
-    
-            <div class="radiobg">
-                <label class="radio">
-                  <span class="sr-only">Checkbox</span>
-                  <input type="radio" class="radio__input" name="example">
-                  <span class="radio__checkmark"></span>
-                </label>
-                <label class="radio">
-                  <span class="sr-only">Checkbox</span>
-                  <input type="radio" class="radio__input" name="example" checked="">
-                  <span class="radio__checkmark"></span>
-                </label>
-            </div>
-    
-    
-            <div class="togglebx">
-                <label class="labelt">
-                  <div class="con">
-                      <input class="switch" type="checkbox" name="check" value="check">
-                      <div class="toggle"></div>
-                  </div>
-                </label>
-                <label class="labelt">
-                  <div class="con">
-                      <input class="switch" type="checkbox" name="check" value="check" checked>
-                      <div class="toggle"></div>
-                  </div>
-                </label>
-            </div>
-    
-    
-    
-            <div class="progress">
-                <div class="skill">
-                  <div class="therm outer-therm vertical" 
-                  style="width:50px;height:150px;background-color:#eeeff2">
-                   <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 50%; width: 50px;">
-                   </div>
-                  </div>
-                </div>
-              
-              
-                <div class="skill">
-                  <div class="therm outer-therm vertical" 
-                  style="width:50px;height:200px;background-color:#eeeff2">
-                   <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 80%; width: 50px;">
-                     
-                   </div>
-                  </div>
-                </div>
-              
-              
-                <div class="skill">
-                  <div class="therm outer-therm vertical" 
-                  style="width:50px;height:108px;background-color:#eeeff2">
-                   <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 55%; width: 50px;">
-                      
-                   </div>
-                  </div>
-                </div>
-                <div class="skill">
-                  <div class="therm outer-therm vertical" 
-                  style="width:50px;height:216px;background-color:#eeeff2">
-                   <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 80%; width: 50px;">
-                      
-                   </div>
-                  </div>
-              </div>
-              
-              
-              <div class="skill">
-                <div class="therm outer-therm vertical" 
-                style="width:50px;height:150px;background-color:#eeeff2">
-                 <div class="therm inner-therm vertical" style="background-color:#1656f0; height: 65%; width: 50px;">
-                    
-                 </div>
-                </div>
-              </div>
-            </div>
-    
-    
-            
-        </div>
-    
-    
-        
-        <div class="box2">
-          <div class="searchbx">
-            <div class="field">
-              <span class="fas fa-search" aria-hidden="true"></span>
-              <input type="search" placeholder="search">
-            </div>
-          </div>
-        </div>
-    
-    
-         
-    
-        
-        -->
-       
-    
-       <script>
-         document.oncontextmenu = new Function("return false;");
-      //      $(window).on('load', function() { // makes sure the whole site is loaded 
-      //        $('#status').fadeOut(); // will first fade out the loading animation 
-      //        $('#preloader').delay(850).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-      //        $('body').delay(850).css({'overflow':'visible'});
-      //      })</script> <script>
-      //     /* ---------------------------------------------
-      //      scroll body to 0px on click
-      //   --------------------------------------------- */
-      //   $('#back-top a').on("click", function () {
-      //      $('body,html').animate({
-      //          scrollTop: 0
-      //      }, 1000);
-      //      return false;
-      //  });
-       </script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </footer>
+  
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-       <script>
-        //progress bar // 
-       $('.neumorphic-slider__thumb').on('mousedown', function(){
-         $(document).on('mousemove.mm', function(e){
-           var new_value = 0;
-           if (e.clientX < $('.neumorphic-slider').offset().left) {
-             new_value = '0%';
-           } else if (e.clientX > $('.neumorphic-slider').offset().left + $('.neumorphic-slider').width() - 10) {
-             new_value = '100%';
-           } else {
-             new_value = ((e.clientX - $('.neumorphic-slider').offset().left) / ($('.neumorphic-slider').width() - 10) * 100).toFixed(0) + '%';
-           }
-           document.documentElement.style.setProperty('--value', new_value);
-           $('.neumorphic-slider__popover').text(new_value);
-         });
-         $(document).on('mouseup.mu', function(){
-           $(document).off('mousemove.mm');
-           $('.neumorphic-slider__thumb').off('mouseup.mu');
-         });
-       }); 
-        
-  $(".m_button").click(function() {
-    $('body').toggleClass("active");
-  });
- 
-   
-       </script>
-       
-   
-   
-   
-   
+  <script>
+    //progress bar // 
+    $('.neumorphic-slider__thumb').on('mousedown', function () {
+      $(document).on('mousemove.mm', function (e) {
+        var new_value = 0;
+        if (e.clientX < $('.neumorphic-slider').offset().left) {
+          new_value = '0%';
+        } else if (e.clientX > $('.neumorphic-slider').offset().left + $('.neumorphic-slider').width() - 10) {
+          new_value = '100%';
+        } else {
+          new_value = ((e.clientX - $('.neumorphic-slider').offset().left) / ($('.neumorphic-slider').width() - 10) * 100).toFixed(0) + '%';
+        }
+        document.documentElement.style.setProperty('--value', new_value);
+        $('.neumorphic-slider__popover').text(new_value);
+      });
+      $(document).on('mouseup.mu', function () {
+        $(document).off('mousemove.mm');
+        $('.neumorphic-slider__thumb').off('mouseup.mu');
+      });
+    });
+
+    $(".m_button").click(function () {
+      $('body').toggleClass("active");
+    });
+
+
+  </script>
+
+
+
+
+
 </body>
+
 </html>
